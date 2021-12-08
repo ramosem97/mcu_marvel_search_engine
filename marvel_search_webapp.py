@@ -86,7 +86,7 @@ def SearchDocument(query, topn=10):
     
     ## Get Positive Relevance Score Only
     relevant_chars = char_info.loc[char_info['Relevance']>0].sort_values(['Relevance'], ascending=False)[['Character', 'Movie Apperances']].reset_index(drop=True)
-    relevant_chars = relevant_chars.head(5)
+    relevant_chars = relevant_chars.head(6)
     
     
     ######### Run Similar Movies #####################
@@ -96,7 +96,7 @@ def SearchDocument(query, topn=10):
     
     ## Get Positive Relevance Score Only
     relevant_movies = movie_info.loc[movie_info['Relevance']>0].sort_values(['Relevance'], ascending=False)[['Movie', 'Release Year']].reset_index(drop=True)
-    relevant_movies = relevant_movies.head(5)
+    relevant_movies = relevant_movies.head(6)
     
     #### Return Results
     
